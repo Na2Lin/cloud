@@ -1,0 +1,34 @@
+
+server:
+  port: 9223
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9201/eureka/
+
+spring:
+  application:
+    name: service-feign
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: tml
+    password: haohao
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

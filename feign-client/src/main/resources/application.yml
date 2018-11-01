@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.78.89.241:3306/szh
+    username: tml
+    password: HaoHao11
+feign:
+  hystrix:
+    enabled: true
